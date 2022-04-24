@@ -12,8 +12,132 @@
       rel="icon"
       href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/155/ear-of-maize_1f33d.png"
     />
-    <link rel="stylesheet" href="style.css" />
     <title>Mamur Market</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html {
+        font-size: 62.5%;
+      }
+      .header {
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
+        align-items: center;
+        backdrop-filter: blur(20px);
+      }
+      .header-title {
+        color: rgb(0, 0, 0);
+        cursor: pointer;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-size: 2rem;
+      }
+      span {
+        color: red;
+      }
+      .login-side {
+        font-size: 2rem;
+        text-decoration: none;
+      }
+      .login-side a {
+        text-decoration: none;
+        padding: 1.1rem;
+        color: rgb(9, 26, 9);
+      }
+      .href:hover,
+      span:hover {
+        color: white;
+        transform: scale(1.8);
+      }
+      body {
+        background-color: bisque;
+      }
+      .one {
+        text-align: center;
+      }
+      .main-part-title {
+        font-size: 3rem;
+        background-color: beige;
+      }
+      .home {
+        padding: 4rem;
+        gap: 3rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+      .card {
+        background-color: rgba(127, 255, 212, 0.667);
+        padding: 1rem;
+        border-radius: 1rem;
+        backdrop-filter: blur(10px);
+        border: 2px solid rgb(246, 246, 246);
+        box-shadow: 5px 5px 14px rgba(0, 0, 0, 0.364);
+      }
+      .card:hover {
+        backdrop-filter: blur(5px);
+      }
+      .card-image {
+        font-size: 16rem;
+        text-align: center;
+      }
+      .card-image:hover {
+        cursor: pointer;
+        transform: scale(1.2);
+      }
+      .card-bottom {
+        text-align: center;
+        font-size: 2rem;
+        color: rgb(0, 0, 0);
+        line-height: 2;
+        font-family: monospace;
+      }
+      .card-b {
+        text-align: center;
+      }
+      .buy {
+        font-size: 2rem;
+        background-color: aliceblue;
+        border: none;
+        padding: 1rem 5rem;
+        border-radius: 0.5rem;
+      }
+      .buy:hover {
+        color: white;
+        background-color: black;
+        cursor: pointer;
+      }
+      .product-main {
+        padding: 4rem;
+        display: flex;
+        justify-content: center;
+      }
+
+      .product {
+        width: 70%;
+      }
+      .border {
+        border: 2px solid rgb(255, 255, 255);
+        background-color: rgba(255, 255, 255, 0.141);
+      }
+      .full {
+        padding: 3rem;
+        height: 100vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url(./pexels-photo-5946083.webp);
+      }
+      .oxshash {
+        gap: 3rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+      .card-description {
+        color: rgb(4, 0, 247);
+      }
+    </style>
   </head>
 
   <body>
@@ -28,53 +152,7 @@
       <div class="one">
         <h1 class="main-part-title">Welcome to our Market</h1>
       </div>
-      <div class="home">
-        <div class="card">
-          <div class="card-image">🍬</div>
-          <div class="card-bottom">
-            <p class="card-price">Price:12$</p>
-            <p class="card-buyed">Buyed:12</p>
-            <p class="card-category">Category:chocolate</p>
-          </div>
-          <div class="card-b">
-            <div class="card-buy">
-              <a href="#">
-                <button class="buy">Buy</button>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-image">🍬</div>
-          <div class="card-bottom">
-            <p class="card-price">Price:12$</p>
-            <p class="card-buyed">Buyed:12</p>
-            <p class="card-category">Category:chocolate</p>
-          </div>
-          <div class="card-b">
-            <div class="card-buy">
-              <a href="product.html">
-                <button class="buy">Buy</button>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-image">🍬</div>
-          <div class="card-bottom">
-            <p class="card-price">Price:12$</p>
-            <p class="card-buyed">Buyed:12</p>
-            <p class="card-category">Category:chocolate</p>
-          </div>
-          <div class="card-b">
-            <div class="card-buy">
-              <a href="#">
-                <button class="buy">Buy</button>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div class="home">{card}</div>
     </div>
   </body>
 </html>

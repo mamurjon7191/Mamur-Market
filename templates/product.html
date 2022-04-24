@@ -5,23 +5,146 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html {
+        font-size: 62.5%;
+      }
+      .header {
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
+        align-items: center;
+        backdrop-filter: blur(20px);
+      }
+      .header-title {
+        color: rgb(0, 0, 0);
+        cursor: pointer;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-size: 2rem;
+      }
+      span {
+        color: red;
+      }
+      .login-side {
+        font-size: 2rem;
+        text-decoration: none;
+      }
+      .login-side a {
+        text-decoration: none;
+        padding: 1.1rem;
+        color: rgb(9, 26, 9);
+      }
+      .href:hover,
+      span:hover {
+        color: white;
+        transform: scale(1.8);
+      }
+      body {
+        background-color: bisque;
+      }
+      .one {
+        text-align: center;
+      }
+      .main-part-title {
+        font-size: 3rem;
+        background-color: beige;
+      }
+      .home {
+        padding: 4rem;
+        gap: 3rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+      .card {
+        background-color: rgba(127, 255, 212, 0.667);
+        padding: 1rem;
+        border-radius: 1rem;
+        backdrop-filter: blur(10px);
+        border: 2px solid rgb(246, 246, 246);
+        box-shadow: 5px 5px 14px rgba(0, 0, 0, 0.364);
+      }
+      .card:hover {
+        backdrop-filter: blur(5px);
+      }
+      .card-image {
+        font-size: 16rem;
+        text-align: center;
+        z-index: 1000;
+      }
+      .card-image:hover {
+        cursor: pointer;
+        transform: scale(1.2);
+      }
+      .card-bottom {
+        text-align: center;
+        font-size: 2rem;
+        color: rgb(0, 0, 0);
+        line-height: 2;
+        font-family: monospace;
+      }
+      .card-b {
+        text-align: center;
+      }
+      .buy {
+        font-size: 2rem;
+        background-color: aliceblue;
+        border: none;
+        padding: 1rem 5rem;
+        border-radius: 0.5rem;
+      }
+      .buy:hover {
+        color: white;
+        background-color: black;
+        cursor: pointer;
+      }
+      .product-main {
+        padding: 4rem;
+        display: flex;
+        justify-content: center;
+      }
+
+      .product {
+        width: 70%;
+      }
+      .border {
+        border: 2px solid rgb(255, 255, 255);
+        background-color: rgba(255, 255, 255, 0.141);
+      }
+      .full {
+        padding: 3rem;
+        height: 100vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url(./pexels-photo-5946083.webp);
+      }
+      .oxshash {
+        gap: 3rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+      .card-description {
+        color: rgb(4, 0, 247);
+      }
+    </style>
   </head>
   <body>
     <div class="full">
       <div class="product-main">
         <div class="product">
           <div class="card border">
-            <div class="card-image">🍬</div>
+            <div class="card-image">{card-image}</div>
             <div class="card-bottom">
-              <p class="card-description">
-                Description:Candy, also called sweets (British English) or
-                lollies (Australian English, New Zealand English),[a] is a
-                confection that features sugar as a principal ingredient.
-              </p>
-              <p class="card-price">Price:12$</p>
-              <p class="card-buyed">Buyed:12</p>
-              <p class="card-category">Category:chocolate</p>
+              <p class="card-name">{card-name}</p>
+              <p class="card-description">{card-des}</p>
+              <p class="card-price">Price:{card-price}$</p>
+              <p class="card-buyed">Buyed:{card-buyed}</p>
+              <p class="card-category">Category:{card-category}</p>
+              <p class="card-reyting">Category:{card-reyting}</p>
             </div>
             <div class="card-b">
               <div class="card-buy">
@@ -33,53 +156,7 @@
           </div>
         </div>
       </div>
-      <div class="oxshash">
-        <div class="card border">
-          <div class="card-image">🍬</div>
-          <div class="card-bottom">
-            <p class="card-price">Price:12$</p>
-            <p class="card-buyed">Buyed:12</p>
-            <p class="card-category">Category:chocolate</p>
-          </div>
-          <div class="card-b">
-            <div class="card-buy">
-              <a href="#">
-                <button class="buy">Buy</button>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="card border">
-          <div class="card-image">🍬</div>
-          <div class="card-bottom">
-            <p class="card-price">Price:12$</p>
-            <p class="card-buyed">Buyed:12</p>
-            <p class="card-category">Category:chocolate</p>
-          </div>
-          <div class="card-b">
-            <div class="card-buy">
-              <a href="#">
-                <button class="buy">Buy</button>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="card border">
-          <div class="card-image">🍬</div>
-          <div class="card-bottom">
-            <p class="card-price">Price:12$</p>
-            <p class="card-buyed">Buyed:12</p>
-            <p class="card-category">Category:chocolate</p>
-          </div>
-          <div class="card-b">
-            <div class="card-buy">
-              <a href="#">
-                <button class="buy">Buy</button>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div class="oxshash">{card-oxshash}</div>
     </div>
   </body>
 </html>
